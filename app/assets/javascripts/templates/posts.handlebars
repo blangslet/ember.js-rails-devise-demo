@@ -1,0 +1,4 @@
+{{#each post in controller}}
+  {{#linkTo "post" post}}{{post.title}}{{/linkTo}}         
+{{/each}}
+  {{outlet}}

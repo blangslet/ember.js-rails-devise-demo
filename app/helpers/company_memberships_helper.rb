@@ -1,0 +1,2 @@
+module CompanyMembershipsHelper
+end

@@ -1,0 +1,23 @@
+<h1>Listing company_memberships</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @company_memberships.each do |company_membership| %>
+  <tr>
+    <td><%= company_membership.user_id %></td>
+    <td><%= link_to 'Show', company_membership %></td>
+    <td><%= link_to 'Edit', edit_company_membership_path(company_membership) %></td>
+    <td><%= link_to 'Destroy', company_membership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Company membership', new_company_membership_path %>

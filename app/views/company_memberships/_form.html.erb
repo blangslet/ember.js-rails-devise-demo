@@ -1,0 +1,21 @@
+<%= form_for(@company_membership) do |f| %>
+  <% if @company_membership.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@company_membership.errors.count, "error") %> prohibited this company_membership from being saved:</h2>
+
+      <ul>
+      <% @company_membership.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

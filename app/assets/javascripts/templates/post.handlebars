@@ -1,0 +1,12 @@
+<ul>
+    {{#each comment in controller.comments}}
+        <li>{{comment.rank}} {{comment.description}} - isActive: {{comment.isActive}}</li>
+    {{/each}}
+    </ul>
+ {{render comments}}
+      
+      <button {{action "addComment"}} >Add New Comment</button>
+      {{#linkTo post.index}}<button>All Comments in Post</button>{{/linkTo}}
+      {{#linkTo post.active}}<button>Active Comments</button>{{/linkTo}}
+      {{#linkTo post.inactive}}<button>Inactive Comments</button>{{/linkTo}}
+    {{outlet}}

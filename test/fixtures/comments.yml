@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  post_id: 1
+  description: MyString
+  is_active: false
+  rank: 1
+
+two:
+  post_id: 1
+  description: MyString
+  is_active: false
+  rank: 1
