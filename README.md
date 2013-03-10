@@ -61,10 +61,10 @@ Interesting pieces of code:
     App::Application.routes.draw do
 
     resources :companies do
-        member do
-          get :set_current_company
-        end
+      member do
+        get :set_current_company
       end
+    end
     ...
 
 The set_current_company method will set the current_company variable session-wide and redirect the user to the assets/index.html.erb rails view that contains your ember application. 
@@ -83,9 +83,9 @@ The set_current_company method will set the current_company variable session-wid
 
         respond_to do |format|
           if @post.save
-          render json: @post, status: :created, location: @post
+            render json: @post, status: :created, location: @post
           else
-          render json: @post.errors, status: :unprocessable_entity 
+            render json: @post.errors, status: :unprocessable_entity 
           end
         end
     end
