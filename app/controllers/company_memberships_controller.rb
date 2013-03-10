@@ -4,11 +4,11 @@ class CompanyMembershipsController < ApplicationController
   # GET /company_memberships
   # GET /company_memberships.json
   def index
-    @company_memberships = CompanyMembership.all
+    @company_memberships = CompanyMembership.where(company_id: current_company.id)
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @company_memberships }
+      format.json { render json: @company_memberships, :meta => {:current_user => current_user, :current_company => current_company} }
     end
   end
 
